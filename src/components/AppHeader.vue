@@ -4,16 +4,33 @@
 export default {
   data() {
     return {
-      title: "Header",
+      term: "",
     };
   },
 
-  // components: {
-  //   MyComponent,
-  // },
+  emits: ["start-search"],
 };
 </script>
 
-<template></template>
+<template>
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <form
+        @submit.prevent="$emit('start-search', term)"
+        class="d-flex"
+        role="search"
+      >
+        <input
+          v-model="term"
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</template>
 
 <style lang="scss" scoped></style>
