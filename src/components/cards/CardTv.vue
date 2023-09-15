@@ -11,6 +11,7 @@ export default {
 <template>
   <div class="card">
     <div class="card-body">
+      <img :src="cardInfo.image" alt="" srcset="" />
       {{ cardInfo.title }} - {{ cardInfo.original_title }} -
       {{ cardInfo.vote }}
 
