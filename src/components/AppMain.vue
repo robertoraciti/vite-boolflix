@@ -2,12 +2,6 @@
 import CardsList from "./cards/CardsList.vue";
 
 export default {
-  data() {
-    return {
-      title: "Hello world",
-    };
-  },
-
   components: {
     CardsList,
   },
@@ -15,9 +9,11 @@ export default {
 </script>
 
 <template>
-  <div class="container mt-5">
-    <CardsList />
-  </div>
+  <main>
+    <div class="container mt-5">
+      <CardsList />
+    </div>
+  </main>
 </template>
 
 <style lang="scss" scoped></style>

@@ -35,6 +35,7 @@ export default {
               original_language,
               vote_average,
               poster_path,
+              overview,
             } = movie;
             return {
               id,
@@ -43,6 +44,7 @@ export default {
               language: original_language,
               vote: vote_average,
               image: "https://image.tmdb.org/t/p/w342" + poster_path,
+              description: overview,
             };
           });
         });
@@ -66,6 +68,7 @@ export default {
               original_language,
               vote_average,
               poster_path,
+              overview,
             } = tvSerie;
             return {
               id,
@@ -74,6 +77,7 @@ export default {
               language: original_language,
               vote: vote_average,
               image: "https://image.tmdb.org/t/p/w342" + poster_path,
+              description: overview,
             };
           });
         });
@@ -96,4 +100,8 @@ export default {
   <AppMain />
 </template>
 
-<style></style>
+<style>
+body {
+  background-color: #1b1b1b;
+}
+</style>
